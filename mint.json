@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Fullstack For Frontend 3",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
@@ -12,14 +12,11 @@
     "dark": "#0050B4"
   },
   "topbarLinks": [
-    {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
-    }
+
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "name": "Frontend Masters: FSFE3",
+    "url": "https://frontendmasters.com/workshops/fullstack-v3/"
   },
   "anchors": [
     {
@@ -28,14 +25,9 @@
       "url": "api-reference"
     },
     {
-      "name": "Changelog",
+      "name": "Course Link",
       "icon": "list",
-      "url": "https://mintlify.com"
-    },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "url": "https://frontendmasters.com/workshops/fullstack-v3/"
     }
   ],
   "navigation": [
@@ -58,8 +50,7 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/jemyoung",
+    "linkedin": "https://www.linkedin.com/in/jemyoung"
   }
 }
