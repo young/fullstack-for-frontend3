@@ -1,4 +1,5 @@
 export default {
+  src: './pages',
     // Set output folder to read from GH pages
     dest: '/dist',
     themeConfig: {
