@@ -1,11 +1,12 @@
 {
   "name": "fullstack-for-frontend3",
   "version": "1.0.0",
-  "description": "Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including",
+  "description": "Fullstack for Frontend 3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/mintlify/bin/index.js dev"
+    "dev": "docz dev",
+    "build": "docz build",
+    "serve": "docz build && docz serve"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/young/fullstack-for-frontend3#readme",
   "dependencies": {
-    "mintlify": "^2.1.0"
+    "docz": "latest",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   }
 }
