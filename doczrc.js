@@ -1,7 +1,7 @@
 export default {
   src: './pages',
     // Set output folder to read from GH pages
-    dest: '/dist',
+    dest: '/docs',
     themeConfig: {
       initialColorMode: 'dark',
     },
