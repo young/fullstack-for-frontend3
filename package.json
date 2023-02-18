@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "docz dev",
-    "build": "docz build && git commit -am 'Update build'",
+    "build": "docz build && git add . && git commit -am 'Update build'",
     "serve": "docz build && docz serve"
   },
   "repository": {
