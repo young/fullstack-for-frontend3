@@ -1,26 +1,30 @@
 {
   "name": "fullstack-for-frontend3",
-  "version": "1.0.1",
-  "description": "Fullstack for Frontend 3",
-  "main": "index.js",
-  "scripts": {
-    "dev": "docz dev",
-    "build": "docz build && git add . && git commit -am 'Update build'",
-    "serve": "docz build && docz serve"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/young/fullstack-for-frontend3.git"
-  },
   "author": "Jem Young",
-  "license": "ISC",
+  "version": "3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/young/fullstack-for-frontend3/issues"
   },
   "homepage": "https://github.com/young/fullstack-for-frontend3#readme",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build2": "docz build",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
   "dependencies": {
-    "docz": "latest",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "@emotion/styled": "^10.0.0",
+    "docz": "^2.0.0-rc.76",
+    "gatsby": "^2.13.73",
+    "gatsby-plugin-offline": "^2.2.7",
+    "gatsby-plugin-sharp": "^2.2.18",
+    "gatsby-theme-docz": "latest",
+    "gatsby-transformer-sharp": "^2.2.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet-async": "^1.0.4",
+    "typescript": "^4.9.5"
   }
 }
