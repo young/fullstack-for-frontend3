@@ -9,8 +9,8 @@
   "homepage": "https://github.com/young/fullstack-for-frontend3#readme",
   "scripts": {
     "dev": "gatsby develop",
-    "build2": "docz build",
-    "build": "gatsby build",
+    "build": "docz build",
+    "build2": "gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {

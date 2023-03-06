@@ -1,0 +1,15 @@
+{
+    "name": "fsfe-app",
+    "version": "1.0.0",
+    "description": "Example for websockets and databases",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "ws": "^3.3.3"
+    }
+}

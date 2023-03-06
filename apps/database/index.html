@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Websocket Demo</title>
+</head>
+
+<body>
+</body>
+<script>
+
+let ws;
+try {
+  // Choose correct websocket proto
+  const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+  ws = new WebSocket(`${proto}://${window.location.host}`);
+} catch(e) {
+  // 
+}
+ws.onmessage = (event) => {console.log(event.data) }
+
+</script>
+
+</html>
