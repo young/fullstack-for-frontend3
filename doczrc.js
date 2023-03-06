@@ -1,6 +1,6 @@
 export default {
   base: '/fullstack-for-frontend3/',
-  src: './pages',
+  src: './src/pages',
     // Set output folder to read from GH pages
     dest: '/docs',
     themeConfig: {
@@ -14,5 +14,6 @@ export default {
           "Welcome to your terminal"
         ],
       },
-    ]
+
+    ]    
   }
