@@ -1,22 +1,15 @@
 {
-  "name": "docz-example-gatsby",
-  "private": true,
-  "description": "Example of how to integrate docz with gatsby as a theme",
-  "version": "2.0.0-rc.41",
-  "keywords": [
-    "gatsby",
-    "docz"
-  ],
+  "name": "fullstack-for-frontend3",
+  "author": "Jem Young",
+  "version": "3.0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pedronauck/docz/issues"
+    "url": "https://github.com/young/fullstack-for-frontend3/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pedronauck/docz.git"
-  },
+  "homepage": "https://github.com/young/fullstack-for-frontend3#readme",
   "scripts": {
     "dev": "gatsby develop",
+    "build2": "docz build",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
