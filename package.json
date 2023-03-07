@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "docz build",
-    "build2": "gatsby build",
+    "build2": "gatsby build --prefix-paths",
     "serve": "gatsby serve"
   },
   "dependencies": {
