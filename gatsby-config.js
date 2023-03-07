@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/fullstack-for-frontend3/`,
   plugins: [
     'gatsby-theme-docz',
     `gatsby-transformer-sharp`,
