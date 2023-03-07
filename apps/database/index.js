@@ -1,22 +1,37 @@
 const express = require('express');
-const WebSocketServer = require('ws').Server;
 const server = require('http').createServer();
-
-const wss = new WebSocketServer({ server: server });
 const app = express();
-
 const PORT = 3000;
 
-/** ROUTES **/
 app.get('/', function(req, res) {
   res.sendFile('index.html', {root: __dirname});
 });
 
-/** END ROUTES **/
+server.on('request', app);
+
+process.on('SIGINT', () => {
+  server.close(() => {
+    shutdownDB(); 
+  });
+});
+
+server.listen(PORT, function () { console.log('Listening on ' + PORT); });
+
+/** Websocket **/
+const WebSocketServer = require('ws').Server;
+
+const wss = new WebSocketServer({ server: server });
 
 wss.on('connection', function connection(ws) {
-   console.log('clients connected: ', wss.clients.size);
-    wss.broadcast(`Current visitors: ${wss.clients.size}`);
+  const numClients = wss.clients.size;
+
+  console.log('clients connected: ', numClients);
+
+  // Log number of visitors at current moment
+  db.run(`INSERT INTO visitors (count, time)
+    VALUES (${numClients}, datetime('now'))`);
+
+  wss.broadcast(`Current visitors: ${numClients}`);
 
   if (ws.readyState === ws.OPEN) {
     ws.send('welcome!');
@@ -24,7 +39,7 @@ wss.on('connection', function connection(ws) {
 
   ws.on('close', function close() {
     wss.broadcast(`Current visitors: ${wss.clients.size}`);
-    console.log('disconnected');
+    console.log('A client has disconnected');
   });
 
   ws.on('error', function error() {
@@ -43,7 +58,33 @@ wss.broadcast = function broadcast(data) {
     client.send(data);
   });
 };
+/** End Websocket **/
+
+/** Database stuff **/
+
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database(':memory:');
+
+// .seralize ensures DB is set up before any queries
+db.serialize(() => {
+    db.run(`CREATE TABLE visitors (
+      count INTEGER,
+      time TEXT
+      )`);
+});
+
+function getCounts() {
+    db.each("SELECT * FROM visitors", (err, row) => {
+      console.log(row);
+    });
+}
+
+function shutdownDB() {
+  getCounts();
+  console.log('shutting down DB');
+  db.close();
+}
 
 
-server.on('request', app);
-server.listen(PORT, function () { console.log('Listening on ' + PORT); });
+
+/** End Database stuff **/
