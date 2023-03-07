@@ -10,7 +10,7 @@ export default {
     initialColorMode: 'dark',
     colors: {
       header: {
-        bg: 'tomato',
+        bg: 'yellow',
       }
     },
   },
@@ -20,6 +20,32 @@ export default {
       menu: [
         "Introduction",
         "Diving In"
+      ],
+    },
+    {
+      name: "Exercises",
+      menu: [
+        "Welcome to your terminal",
+        "VIM",
+        "Shell configuration",
+        "VPS",
+        "SSH Key",
+        "Logging In",
+        "Network Tools",
+        "DNS",
+        "Buying a domain",
+        "Nginx",
+        "Application setup",
+        "Git",
+        "Nmap",
+        "UFW",
+        "Application updates",
+        "CI/CD",
+        "Finding things",
+        "Databases",
+        "Login page",
+        "HTTPS",
+        "Docker",
       ],
     },
   ]    

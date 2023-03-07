@@ -10,12 +10,12 @@ const CodeStyled = styled.div`
   background: black
 `
 
-const Code = props => {
+const Code = ({children, explainer, ...props}) => {
     return (
     <>
-        <div>{props.explainer}</div>
+        <div>{explainer}</div>
         <CodeStyled {...props}>
-            <code>{props.children}</code>
+            <code>{children}</code>
         </CodeStyled>
     </>
     );

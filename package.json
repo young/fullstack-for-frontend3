@@ -9,8 +9,8 @@
   "homepage": "https://github.com/young/fullstack-for-frontend3#readme",
   "scripts": {
     "dev": "gatsby develop",
-    "build": "docz build",
-    "build2": "gatsby build --prefix-paths",
+    "build": "gatsby build --prefix-paths",
+    "publish": "rm -rf docs && mv ./public ./docs",
     "serve": "gatsby serve"
   },
   "dependencies": {
