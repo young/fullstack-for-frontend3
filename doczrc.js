@@ -3,6 +3,9 @@ export default {
   src: './src/pages',
   // Set output folder to read from GH pages
   dest: '/docs',
+  htmlContext: {
+    favicon: "/src/images/favicon.ico",
+  },
   themeConfig: {
     initialColorMode: 'dark',
     colors: {
@@ -13,10 +16,10 @@ export default {
   },
   menu: [
     {
-      name: "Getting Started",
+      name: "Introduction",
       menu: [
-        "Getting Started",
-        "Welcome to your terminal"
+        "Introduction",
+        "Diving In"
       ],
     },
   ]    
