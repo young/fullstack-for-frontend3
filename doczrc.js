@@ -28,7 +28,7 @@ export default {
         "Welcome to your terminal",
         "VIM",
         "Shell configuration",
-        "VPS",
+        "Buying VPS",
         "SSH Key",
         "Logging In",
         "Network Tools",
