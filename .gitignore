@@ -1,9 +1,0 @@
-node_modules
-.docz
-.git
-.github
-.cache
-.DS_Store
-package-lock.json
-public
-.gitignore
