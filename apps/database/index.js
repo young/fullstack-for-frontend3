@@ -1,7 +1,6 @@
 const express = require('express');
 const server = require('http').createServer();
 const app = express();
-const PORT = 3000;
 
 app.get('/', function(req, res) {
   res.sendFile('index.html', {root: __dirname});
@@ -15,7 +14,7 @@ process.on('SIGINT', () => {
   });
 });
 
-server.listen(PORT, function () { console.log('Listening on ' + PORT); });
+server.listen(3000, function () { console.log('Listening on 3000'); });
 
 /** Websocket **/
 const WebSocketServer = require('ws').Server;
